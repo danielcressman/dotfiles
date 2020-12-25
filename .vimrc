@@ -20,3 +20,33 @@ set statusline=%f " show the current filename
 " numbering settings
 set number " enable line numbers
 set relativenumber " show offsets relative to current line
+
+" ale settings
+let g:ale_linters = {
+  \'python': ['pyls', 'flake8', 'mypy', 'pylint']
+\}
+let g:ale_fixers = {
+  \'python': ['autopep8'],
+\}
+let g:ale_completion_enabled = 1 " autocomplete enabled
+let g:ale_set_highlights = 0 " disable highlights, python linters were being weird with autocomplete
+
+" auto-complete settings
+set completeopt=menu,menuone,popup,noinsert " show a menu, show docs in popup, don't auto-insert text when auto-completing
+set splitbelow " splits window below the current, makes preview window show up at bottom
+" enter and tab close autocomplete when popup menu is visible
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
+inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "\<Tab>"
+
+" remap gd to jump to definition
+nnoremap <silent> gd :ALEGoToDefinition<CR>
+
+" ctrl+j to open preview window for current symbol
+" ctrl+c to close preview window
+nnoremap <C-j> <Esc>:ALEHover<CR>
+inoremap <C-j> <Esc>:ALEHover<CR>
+nnoremap <C-c> <Esc>:pc<CR>
+inoremap <C-c> <Esc>:pc<CR>
+
+" disable terminal bell (e.g. for when you press Esc outside of insert mode)
+set noerrorbells visualbell t_vb=
