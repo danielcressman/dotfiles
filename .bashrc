@@ -2,7 +2,7 @@
 PS1="[\u \w] "
 
 # I like to use vim
-export EDITOR="usr/bin/vim"
+export EDITOR="/usr/bin/vim"
 
 # set history buffer size, infinite history saved to disk
 HISTSIZE=200000 HISTFILESIZE=-1
