@@ -26,7 +26,7 @@ let g:ale_linters = {
   \'python': ['pyls', 'flake8', 'mypy', 'pylint']
 \}
 let g:ale_fixers = {
-  \'python': ['autopep8'],
+  \'python': ['black'],
 \}
 let g:ale_completion_enabled = 1 " autocomplete enabled
 let g:ale_set_highlights = 0 " disable highlights, python linters were being weird with autocomplete
