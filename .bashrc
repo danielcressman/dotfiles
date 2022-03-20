@@ -29,3 +29,15 @@ trap "history -w" SIGUSR1
 # aliases to manage my dotfiles
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias dot='dotfiles'
+
+# display non-0 exit codes
+# stolen from: https://blog.jpalardy.com/posts/automatically-show-exit-codes-in-bash/
+COLOR_RED=$(tput setaf 1)
+ATTR_RESET=$(tput sgr0)
+export PROMPT_COMMAND=show_exit_code
+show_exit_code() {
+  local exit=$?
+  if [ "$exit" -ne 0 ]; then
+    echo -e "${COLOR_RED}[exit: ${exit}]${ATTR_RESET}"
+  fi
+}
