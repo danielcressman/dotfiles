@@ -5,7 +5,7 @@ if [ -f ~/.bashrc_preexisting ]; then
 fi
 
 # Set prompt to format [USER PWD]
-PS1="[\u \w] "
+PS1="[\u@\h \w] "
 
 # I like to use vim
 export EDITOR="/usr/bin/vim"
