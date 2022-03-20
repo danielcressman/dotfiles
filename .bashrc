@@ -5,7 +5,10 @@ if [ -f ~/.bashrc_preexisting ]; then
 fi
 
 # Set prompt to format [USER PWD]
-PS1="[\u@\h \w] "
+USERNAME_COLOR='\e[1;036m'
+PWD_COLOR='\e[01;34m'
+DEFAULT_COLOR='\e[00m'
+PS1="[\d \t \[$USERNAME_COLOR\]\u@\h\[$DEFAULT_COLOR\]:\[$PWD_COLOR\]\w\[$DEFAULT_COLOR\]\$] "
 
 # I like to use vim
 export EDITOR="/usr/bin/vim"
