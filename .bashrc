@@ -1,3 +1,9 @@
+# Source ~/.bashrc_preexisting if it exists
+# I use this file to preserve pre-existing .bashrc files that I don't want to clobber
+if [ -f ~/.bashrc_preexisting ]; then
+  . ~/.bashrc_preexisting
+fi
+
 # Set prompt to format [USER PWD]
 PS1="[\u \w] "
 
