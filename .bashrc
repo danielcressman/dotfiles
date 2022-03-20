@@ -7,8 +7,9 @@ fi
 # Set prompt to format [USER PWD]
 USERNAME_COLOR='\e[1;036m'
 PWD_COLOR='\e[01;34m'
+DATE_COLOR='\e[33m'
 DEFAULT_COLOR='\e[00m'
-PS1="[\d \t \[$USERNAME_COLOR\]\u@\h\[$DEFAULT_COLOR\]:\[$PWD_COLOR\]\w\[$DEFAULT_COLOR\]\$] "
+PS1="[\[$DATE_COLOR\]\d \t \[$USERNAME_COLOR\]\u@\h\[$DEFAULT_COLOR\]:\[$PWD_COLOR\]\w\[$DEFAULT_COLOR\]\$] "
 
 # I like to use vim
 export EDITOR="/usr/bin/vim"
