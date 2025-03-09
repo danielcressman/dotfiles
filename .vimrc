@@ -27,6 +27,12 @@ let g:ale_linters = {
 \}
 let g:ale_fixers = {
   \'python': ['black'],
+  \'javascript': ['prettier'],
+  \'javascriptreact': ['prettier'],
+  \'typescript': ['prettier'],
+  \'typescriptreact': ['prettier'],
+  \'markdown': ['prettier'],
+  \'json': ['prettier'],
 \}
 let g:ale_completion_enabled = 1 " autocomplete enabled
 let g:ale_set_highlights = 0 " disable highlights, python linters were being weird with autocomplete
