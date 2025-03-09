@@ -65,5 +65,8 @@ nnoremap <Leader>e :ALEInfo<CR>
 " disable terminal bell (e.g. for when you press Esc outside of insert mode)
 set noerrorbells visualbell t_vb=
 
+" hide buffers instead of closing them when it's not visible
+set hidden
+
 " highlight all search results while typing
 set is hls
