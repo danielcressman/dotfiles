@@ -52,3 +52,6 @@ alias glog='git log --all --decorate --oneline --graph'
 
 # provide a default command for FZF to grab files to filter
 export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!node_modules/" -g "!Library/" -g "!.git/"'
+
+# this is required to make ls display colors by default on macOS
+export CLICOLOR=1
