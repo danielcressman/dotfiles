@@ -50,4 +50,5 @@ alias gs='git status'
 alias gl='git sl'
 alias glog='git log --all --decorate --oneline --graph'
 
+# provide a default command for FZF to grab files to filter
 export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!node_modules/" -g "!Library/" -g "!.git/"'
