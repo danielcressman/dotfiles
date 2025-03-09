@@ -36,10 +36,18 @@ alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 Since a bare repository is missing some normal features, let's set them back up
 
 ```bash
-dot config --local status.showUntrackedFiles no
 dot config --local branch.master.remote origin
 dot config --local remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
 dot branch --set-upstream-to=origin/master master
+```
+
+#### 3a. Extra QOL things
+
+Since this is designed to be cloned into my home directory, ignore any files that aren't explicitly added. And then `.tmux.conf` is a base config, but future changes should be ignored, since all common stuff goes in .tmux.conf.common, so do that.
+
+```bash
+dot config --local status.showUntrackedFiles no
+dot update-index --assume-unchanged .tmux.conf
 ```
 
 ### 4. Checkout the repo in the home directory
