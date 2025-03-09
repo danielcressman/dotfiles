@@ -37,6 +37,9 @@ let g:ale_fixers = {
 let g:ale_completion_enabled = 1 " autocomplete enabled
 let g:ale_set_highlights = 0 " disable highlights, python linters were being weird with autocomplete
 
+" set leader key to space for ease of use
+let mapleader=" "
+
 " auto-complete settings
 set completeopt=menu,menuone,popup,noinsert " show a menu, show docs in popup, don't auto-insert text when auto-completing
 set splitbelow " splits window below the current, makes preview window show up at bottom
