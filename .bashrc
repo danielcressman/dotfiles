@@ -32,6 +32,11 @@ trap "history -w" SIGUSR1
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias dot='dotfiles'
 
+# git aliases
+alias gs='git status'
+alias gl='git sl'
+alias glog='git log --all --decorate --oneline --graph'
+
 # display non-0 exit codes
 # stolen from: https://blog.jpalardy.com/posts/automatically-show-exit-codes-in-bash/
 COLOR_RED=$(tput setaf 1)
