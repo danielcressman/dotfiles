@@ -4,6 +4,18 @@ if [ -f ~/.bashrc_preexisting ]; then
   . ~/.bashrc_preexisting
 fi
 
+# display non-0 exit codes
+# stolen from: https://blog.jpalardy.com/posts/automatically-show-exit-codes-in-bash/
+COLOR_RED=$(tput setaf 1)
+ATTR_RESET=$(tput sgr0)
+export PROMPT_COMMAND=show_exit_code;
+show_exit_code() {
+  local exit=$?
+  if [ "$exit" -ne 0 ]; then
+    echo -e "${COLOR_RED}[exit: ${exit}]${ATTR_RESET}"
+  fi
+}
+
 # Set prompt to format [USER PWD]
 USERNAME_COLOR='\e[1;036m'
 PWD_COLOR='\e[01;34m'
@@ -24,6 +36,7 @@ HISTSIZE=200000 HISTFILESIZE=-1
 shopt -s histappend
 # write timestamps to bash_history file (why not?)
 export HISTTIMEFORMAT="%F %T"
+PROMPT_COMMAND="$PROMPT_COMMAND;history -a"
 
 # trap signal to write out bash history on demand
 trap "history -w" SIGUSR1
@@ -36,17 +49,5 @@ alias dot='dotfiles'
 alias gs='git status'
 alias gl='git sl'
 alias glog='git log --all --decorate --oneline --graph'
-
-# display non-0 exit codes
-# stolen from: https://blog.jpalardy.com/posts/automatically-show-exit-codes-in-bash/
-COLOR_RED=$(tput setaf 1)
-ATTR_RESET=$(tput sgr0)
-export PROMPT_COMMAND=show_exit_code
-show_exit_code() {
-  local exit=$?
-  if [ "$exit" -ne 0 ]; then
-    echo -e "${COLOR_RED}[exit: ${exit}]${ATTR_RESET}"
-  fi
-}
 
 export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!node_modules/" -g "!Library/" -g "!.git/"'
