@@ -65,6 +65,7 @@ nmap <Leader>d <Plug>(ale_detail)
 nmap <Leader>i <Plug>(ale_import)
 nmap <Leader>r <Plug>(ale_find_references)
 nnoremap <Leader>e :ALEInfo<CR>
+inoremap jj <Esc>
 
 " disable terminal bell (e.g. for when you press Esc outside of insert mode)
 set noerrorbells visualbell t_vb=
