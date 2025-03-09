@@ -70,3 +70,8 @@ set hidden
 
 " highlight all search results while typing
 set is hls
+
+" let vim automatically select the regexp engine, instead of using 'old' one
+" this is needed because typescript parsing is too slow without it
+" see https://jameschambers.co.uk/vim-typescript-slow
+set regexpengine=0
