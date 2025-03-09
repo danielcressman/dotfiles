@@ -48,3 +48,5 @@ show_exit_code() {
     echo -e "${COLOR_RED}[exit: ${exit}]${ATTR_RESET}"
   fi
 }
+
+export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!node_modules/" -g "!Library/" -g "!.git/"'
