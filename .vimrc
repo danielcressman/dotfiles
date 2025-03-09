@@ -4,6 +4,10 @@ call plug#begin('~/.vim/bundle')
 
 Plug 'dense-analysis/ale'
 Plug 'jlanzarotta/bufexplorer'
+Plug 'tpope/vim-eunuch'
+Plug 'jxnblk/vim-mdx-js'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
