@@ -13,6 +13,8 @@ PS1="[\[$DATE_COLOR\]\d \t \[$USERNAME_COLOR\]\u@\h\[$DEFAULT_COLOR\]:\[$PWD_COL
 
 # I like to use vim
 export EDITOR="/usr/bin/vim"
+# vim commands at the bash prompt
+set -o vi
 
 # history settings, see bash(1)
 # I think these were recommended by Jim Meyering
