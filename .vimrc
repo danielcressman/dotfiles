@@ -40,6 +40,7 @@ let g:ale_fixers = {
   \'json': ['prettier'],
 \}
 let g:ale_completion_enabled = 1 " autocomplete enabled
+let g:ale_set_highlights = 0 " disable highlights, python linters were being weird with autocomplete
 
 " set leader key to space for ease of use
 let mapleader=" "
