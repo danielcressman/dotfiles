@@ -23,5 +23,11 @@
     "bindings": {
       "space b e": "tab_switcher::ToggleAll"
     }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-w k": "terminal_panel::ToggleFocus"
+    }
   }
 ]
