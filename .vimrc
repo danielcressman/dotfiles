@@ -28,10 +28,10 @@ set relativenumber " show offsets relative to current line
 
 " ale settings
 let g:ale_linters = {
-  \'python': ['pyls', 'flake8', 'mypy', 'pylint']
+  \'python': ['ruff', 'pyright']
 \}
 let g:ale_fixers = {
-  \'python': ['black'],
+  \'python': ['ruff', 'ruff_format', 'reorder-python-imports'],
   \'javascript': ['prettier'],
   \'javascriptreact': ['prettier'],
   \'typescript': ['prettier'],
