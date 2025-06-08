@@ -54,6 +54,8 @@ alias glog='git log --all --decorate --oneline --graph'
 #tmux alias to always connect to default session
 alias tm="tmux new-session -A -s 0"
 
+alias ll="ls -alh"
+
 # provide a default command for FZF to grab files to filter
 export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!node_modules/" -g "!Library/" -g "!.git/"'
 
