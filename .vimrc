@@ -54,7 +54,7 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "\<Tab>"
 
 " setup shortcuts for various ALE commands
-nnoremap <silent> gd :ALEGoToDefinition<CR>
+nnoremap <silent> gd <Plug>(ale_go_to_definition)
 nmap <Leader>h <Plug>(ale_hover)
 nmap <Leader>f <Plug>(ale_fix)
 nmap <Leader>d <Plug>(ale_detail)
