@@ -53,20 +53,24 @@ set splitbelow " splits window below the current, makes preview window show up a
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "\<Tab>"
 
-" remap gd to jump to definition
+" setup shortcuts for various ALE commands
 nnoremap <silent> gd :ALEGoToDefinition<CR>
-
-" ctrl+j to open preview window for current symbol
-" ctrl+c to close preview window
-nnoremap <C-j> <Esc>:ALEHover<CR>
-inoremap <C-j> <Esc>:ALEHover<CR>
-nnoremap <C-c> <Esc>:pc<CR>
-inoremap <C-c> <Esc>:pc<CR>
+nmap <Leader>h <Plug>(ale_hover)
 nmap <Leader>f <Plug>(ale_fix)
 nmap <Leader>d <Plug>(ale_detail)
 nmap <Leader>i <Plug>(ale_import)
-nmap <Leader>r <Plug>(ale_find_references)
+nmap <Leader>u <Plug>(ale_find_references)
+nmap <Leader>r <Plug>(ale_rename)
+nmap <Leader>q <Esc>:ALEStopAllLSPs<CR>
 nnoremap <Leader>e :ALEInfo<CR>
+
+" setup other vim shortcuts
+nnoremap <C-c> <Esc>:pc<CR>
+inoremap <C-c> <Esc>:pc<CR>
+inoremap <C-f> <Esc>:FZF<CR>
+nnoremap <C-f> <Esc>:FZF<CR>
+nmap <Leader>s <Esc>:mks! ~/temp/vimsession<CR>
+nmap <Leader>l <Esc>:source ~/temp/vimsession<CR>
 inoremap jj <Esc>
 
 " disable terminal bell (e.g. for when you press Esc outside of insert mode)
