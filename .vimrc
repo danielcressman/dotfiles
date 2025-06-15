@@ -29,7 +29,8 @@ set relativenumber " show offsets relative to current line
 
 " ale settings
 let g:ale_linters = {
-  \'python': ['ruff', 'pyright']
+  \'python': ['ruff', 'pyright'],
+  \'rust': ['analyzer']
 \}
 let g:ale_fixers = {
   \'python': ['ruff', 'ruff_format', 'reorder-python-imports'],
