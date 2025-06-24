@@ -56,6 +56,12 @@ alias tm="tmux new-session -A -s 0"
 
 alias ll="ls -alh"
 
+# function to let me easily grep in ps output without removing the header line
+psg() {
+  ps -ef | grep -e "PID" -e "$1"
+}
+
+
 # provide a default command for FZF to grab files to filter
 export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!node_modules/" -g "!Library/" -g "!.git/"'
 
