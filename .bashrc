@@ -47,9 +47,11 @@ alias dot='dotfiles'
 
 # git aliases
 alias gs='git status'
-alias gl='git sl'
+alias gsl='git sl'
 alias gd='git diff'
-alias glog='git log --all --decorate --oneline --graph'
+alias gl='git log'
+alias glp='git log --all --decorate --oneline --graph --pretty=format:"%h%x09%an%x09%ad%x09%s"'
+alias gls='git log --pretty=format:"%h%x09%an%x09%ad%x09%s"'
 
 #tmux alias to always connect to default session
 alias tm="tmux new-session -A -s 0"
