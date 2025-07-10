@@ -33,7 +33,7 @@ let g:ale_linters = {
   \'rust': ['analyzer']
 \}
 let g:ale_fixers = {
-  \'python': ['ruff', 'ruff_format', 'reorder-python-imports'],
+  \'python': ['ruff', 'ruff_format'],
   \'javascript': ['prettier'],
   \'javascriptreact': ['prettier'],
   \'typescript': ['prettier'],
