@@ -75,6 +75,7 @@ nmap <Leader>l <Esc>:source ~/temp/vimsession<CR>
 nmap <Leader>v <Esc>:source ~/.vimrc<CR>
 inoremap jj <Esc>
 nnoremap <C-b> <C-a>
+nnoremap <C-p> <Esc>:set invpaste<CR>
 
 " disable terminal bell (e.g. for when you press Esc outside of insert mode)
 set noerrorbells visualbell t_vb=
