@@ -72,6 +72,7 @@ inoremap <C-f> <Esc>:FZF<CR>
 nnoremap <C-f> <Esc>:FZF<CR>
 nmap <Leader>s <Esc>:mks! ~/temp/vimsession<CR>
 nmap <Leader>l <Esc>:source ~/temp/vimsession<CR>
+nmap <Leader>v <Esc>:source ~/.vimrc<CR>
 inoremap jj <Esc>
 
 " disable terminal bell (e.g. for when you press Esc outside of insert mode)
